@@ -46,3 +46,5 @@
 
 ### №10
 ![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/10.png)
+
+## Самостоятельные задания:
