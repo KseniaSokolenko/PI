@@ -34,7 +34,8 @@ if one >= two:
 else:
     print('Не выполняется')
 ```
-![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.2.png)
 
 ### Вывод: 
 
