@@ -225,7 +225,7 @@ for n in range(7):
 n += 1
 print(n)
 ```
-![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s1.png)
 
 ### Вывод: 
 
@@ -237,7 +237,7 @@ phrase = 'Hello World'
 for i in range(len(phrase) - 1, -1, -1):
     print(phrase[i])
 ```
-![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s2.png)
 
 ### Вывод: 
 
@@ -260,7 +260,9 @@ if 0 <= num <= 10:
 else:
     print('Число не входит в диапозон.')
 ```
-![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s3.1.png)
+
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s3.2.png)
 
 ### Вывод: 
 
@@ -274,9 +276,33 @@ else:
 
 ### Ответ:
 ```python
-
+def manipulate_string(sentence):
+    print("Длина предложения:", len(sentence))
+    lowercase_sentence = sentence.lower()
+    print("Предложение в нижнем регистре:", lowercase_sentence)
+    vowels = 'aeiou'
+    count_vowels = sum(char in vowels for char in sentence)
+    print("Количество гласных:", count_vowels)
+    modified_sentence = sentence.replace('ugly', 'beauty')
+    print("Замененное предложение:", modified_sentence)
+    if sentence.startswith('the'):
+        print("Предложение начинается с 'The'.")
+    else:
+        print("Предложение не начинается с 'The'.")
+    if sentence.endswith('end'):
+        print("Предложение заканчивается на 'end'.")
+    else:
+        print("Предложение не заканчивается на 'end'.")
+while True:
+    sentence = input("Введите предложение: ")
+    manipulate_string(sentence)
+    answer = input("Хотите ввести еще одно предложение? (да/нет): ")
+    if answer == 'нет':
+        break
 ```
-![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s4.1.png)
+
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s4.2.png)
 
 ### Вывод: 
 
@@ -320,8 +346,18 @@ memory = string
 
 ### Ответ:
 ```python
-
+string = 'hello'
+values = [0, 2, 4, 6, 8, 10]
+counter = 0
+while ' world' not in string:
+    memory = string
+    if counter in values:
+        string = string + ' world'
+    print(string)
+    if counter < 10:
+        string = memory
+    counter += 1
 ```
-![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s5.png)
 
 ### Вывод: 
