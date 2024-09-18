@@ -35,6 +35,7 @@ else:
     print('Не выполняется')
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.2.png)
 
 ### Вывод: 
@@ -43,9 +44,15 @@ else:
 
 ### Ответ:
 ```python
-
+one = int(input('Введите значение переменной: '))
+if one < 0:
+    print('Переменная меньше нуля')
+elif 0<one<10:
+    print('Переменная больше 0 и меньше 10')
+else:
+    print('Переменная больше 10')
 ```
-![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/2.png)
 
 ### Вывод: 
 
@@ -54,9 +61,16 @@ else:
 
 ### Ответ:
 ```python
-
+numbers = [1, 3, 4, 6, 8, 9]
+value = int(input('Введите значение переменной: '))
+if value in numbers:
+    print('Переменная есть в данном массиве')
+else:
+    print('Переменной нет в данном массиве')
 ```
-![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/3.1.png)
+
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/3.2.png)
 
 ### Вывод: 
 
@@ -65,9 +79,21 @@ else:
 
 ### Ответ:
 ```python
-
+numbers = [1, 2, 3, 4, 10, 11, 234, 270, 341]
+value = int(input('Введите значение переменной: '))
+if value in numbers:
+    if value %2 == 0:
+        print('Переменная четная и есть в данном массиве.')
+    else:
+        print('Переменная нечетная и есть в данном массиве.')
+else:
+    print(f"Переменной нет в данном массиве и она равна {value}")
 ```
-![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/4.1.png)
+
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/4.2.png)
+
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/4.3.png)
 
 ### Вывод: 
 
@@ -75,9 +101,20 @@ else:
 
 ### Ответ:
 ```python
-
+for i in range(10):
+    print('i = ', i)
+    if i == 0:
+        i += 2
+    if i == 1:
+        continue
+    if i == 2 or i == 3:
+        print('Переменная равна 2 или 3.')
+    elif i in [4, 5, 6]:
+        print('Переменная равна 4, 5 или 6.')
+    else:
+        break
 ```
-![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/5.png)
 
 ### Вывод: 
 
@@ -88,9 +125,17 @@ index = string.find(value)
 
 ### Ответ:
 ```python
-
+string = 'Привет всем изучающим Python!'
+value = input()
+for i in string:
+    if i == value:
+        index = string.find(value)
+        print(f"Буква '{value}' есть в строке под {index} индексом.")
+        break
+else:
+    print(f"Буквы '{value}' нет в указанной строке.")
 ```
-![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/6.png)
 
 ### Вывод: 
 
@@ -98,9 +143,12 @@ index = string.find(value)
 
 ### Ответ:
 ```python
-
+value = 100
+for i in range(10, -1, -1):
+    value -= i
+    print(i, value)
 ```
-![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/7.png)
 
 ### Вывод: 
 
@@ -108,9 +156,19 @@ index = string.find(value)
 
 ### Ответ:
 ```python
-
+value = 0
+while value < 100:
+    if value == 0:
+        value += 10
+    elif value // 5 > 1:
+        value *= 5
+    else:
+        value -= 5
+    print(value)
 ```
-![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/8.1.png)
+
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/8.2.png)
 
 ### Вывод: 
 
@@ -118,9 +176,16 @@ index = string.find(value)
 
 ### Ответ:
 ```python
-
+value = 0
+for i in range(10):
+    for j in range(10):
+        if i != j:
+            value += j
+        else:
+            pass
+print(value)
 ```
-![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/9.png)
 
 ### Вывод: 
 
@@ -128,9 +193,17 @@ index = string.find(value)
 
 ### Ответ:
 ```python
-
+even_array = [2, 4, 6, 8, 9]
+flag = False
+for value in even_array:
+    if value %2 == 1:
+        flag = True
+if flag is True:
+    print('В массиве есть нечетное число')
+else:
+    print('В массиве все числа четные')
 ```
-![Меню](https://github.com/KseniaSokolenko/theme_2/blob/theme_2/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/10.png)
 
 ### Вывод: 
 
