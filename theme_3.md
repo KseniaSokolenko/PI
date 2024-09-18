@@ -186,6 +186,7 @@ index = string.find(value)
 ### Вывод: 
 
 ### №5. Составьте программу, результатом которой будет вывод в консоль:
+```python
 hello world
 hello
 hello world
@@ -197,7 +198,9 @@ hello
 hello world
 hello
 hello world
+```
 ### Программу нужно составить из данных фрагментов кода:
+```python
 memory = 'world'
 if values not in string:
 while
@@ -218,6 +221,7 @@ memory = string
 if counter < 10: counter += 1
 print (memory)
 memory = string
+```
 
 ### Ответ:
 ```python
