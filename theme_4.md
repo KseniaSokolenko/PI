@@ -27,12 +27,11 @@
 Напишите функцию, которая выполняет любые арифметические действия и выводит результат в консоль. Вызовите функцию используя “точку входа”.
 ### Ответ:
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+def main():
+    print(2+2)
+
+if __name__ == '__main__':
+    main()
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
 
@@ -42,16 +41,21 @@ else:
 Напишите функцию, которая выполняет любые арифметические действия, возвращает при помощи return значение в место, откуда вызывали функцию. Выведите результат в консоль. Вызовите функцию используя “точку входа”.
 ### Ответ:
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+исправить
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/2.1.png))
 
 Ниже представлена точно такая же программа, как и выше, только написана более развернуто. В это программе стоит заметить что результат работы функции main() мы помещаем в переменную “answer”, в дальнейшем можно как-то работать с ним, не вызывая функцию повторно, что хорошо сказывается, например, на скорости работы программы.
+
+```python
+def main():
+    result = 2+2
+    return result
+
+if __name__ == '__main__':
+    answer = main()
+    print(answer)
+```
 
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/2.2.png)
 
@@ -63,16 +67,21 @@ else:
 На скриншоте ниже приведен пример программы, в которой аргумент функции "x" превращается в параметр “one”, то же самое происходит "y" и “two”
 ### Ответ:
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+исправить
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/3.1.png)
 
 Ниже представлена точно такая же программа, как и выше, только аргументы передаются в вызове функции, а не как отдельные переменные.
+
+```python
+def main(one, two):
+     return one + two
+
+if __name__ == '__main__':
+    for i in range(5):
+        answer = main(one=1, two=10)
+        print(answer)
+```
 
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/3.2.png)
 
@@ -85,12 +94,17 @@ else:
 результат, только потом запустить программу с новыми значениями и проверить себя, насколько вы поняли данный аспект программирования.
 ### Ответ:
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+def main(x, *args):
+    one = x
+    two = sum(args)
+    three = float(len(args))
+    print (f"one={one}\ntwo={two}\nthree={three}")
+
+    return x + sum(args) / float(len(args))
+
+if __name__ == '__main__':
+    result = main(11, 2, 0, 3, 10, -1, -4, 1)
+    print(f"\nresult={result}")
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/4.png)
 
@@ -100,12 +114,19 @@ else:
 Напишите функцию, которая на вход получает кортеж “**kwargs” и при помощи цикла выводит значения, поступившие в функцию. На скриншоте ниже указаны два варианта вызова функции с “**kwargs” и два варианта работы с данными, поступившими в эту функцию. Комментарии в коде и теоретическая часть помогут вам разобраться в этом нелегком аспекте. Вызовите функцию используя “точку входа”.
 ### Ответ:
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+def main (**kwargs):
+    for i in kwargs.items():
+        print(i[0], i[1])
+
+    print()
+
+    for key in kwargs:
+        print(f"{key} = {kwargs[key]}")
+
+if __name__ == '__main__':
+    main(x=[1,2,3], y=[3,3,0], z=[2,3,0], q=[3,3,0], w=[3,3,0])
+    print()
+    main(**{'x': [1,2,3], 'y': [3,3,0]})
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/5.1.png)
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/5.2.png)
@@ -116,12 +137,15 @@ else:
 Напишите две функции. Первая — получает в виде параметра “**kwargs”. Вторая считает среднее арифметическое из значений первой функции. Вызовите первую функцию используя “точку входа” и минимум 4 аргумента.
 ### Ответ:
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+def main (**kwargs):
+    for i, j in kwargs.items():
+        print(f"{i}. Mean = {mean(j)}")
+
+def mean(data):
+    return sum(data) / float(len(data))
+
+if __name__ == '__main__':
+    main(x=[1,2,3], y=[3,3,0])
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/6.png)
 
@@ -131,12 +155,15 @@ else:
 Создайте дополнительный файл.py. Напишите в нем любую функцию, которая будет что угодно выводить в консоль, но не вызывайте ее в нем. Откройте файл main.py, импортируйте в него функцию из нового файла и при помощи “точки входа” вызовите эту функцию.
 ### Ответ:
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+def say_hello():
+    print('Hello students!')
+```
+
+```python
+from for_import7 import say_hello
+
+if __name__ == '__main__':
+    say_hello()
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/7.1.png)
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/7.2.png)
@@ -147,21 +174,33 @@ else:
 Напишите программу, которая будет выводить корень, синус, косинус полученного от пользователя числа.
 ### Ответ:
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+исправить
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/8.1.png)
 
 На первом скриншоте мы просто импортировали модуль таш целиком и вызвали его длинным способом через math.название_фунции. Также импорт стандартного модуля в python возможно осуществить и другими способами, которые будут выполнять ту же самую функцию, но синтаксис будет немного отличатся.
 На втором скриншоте из модуля math мы загрузили в программу только 3 необходимые функции и обращались к ним так, будто они находятся у нас в файле просто через их название. Также замечу что мы импортировали три функции в одну строку. что очень удобно.
 
+```python
+исправить
+```
+
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/8.2.png)
 
 На третьем скриншоте мы импортировали модуль math и при помощи оператора * загрузили все его функции. По большому счету мы сделали то же самое что и на первом скриншоте, но у нас только поменялся синтаксис вызова этих функций, он стал похож на вызов со второго скриншота.
+
+```python
+from math import *
+
+def main():
+    value = int(input('Введите значение: '))
+    print(sqrt(value))
+    print(sin(value))
+    print(cos(value))
+
+if __name__ == '__main__':
+    main()
+```
 
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/8.3.png)
 
@@ -171,12 +210,24 @@ else:
 Напишите программу, которая будет рассчитывать какой день недели будет через n-нное количество дней, которые укажет пользователь.
 ### Ответ:
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+from datetime import datetime as dt
+from datetime import timedelta as td
+
+def main():
+    print(
+        f"Сегодня {dt.today().date()}. "
+        f"День недели - {dt.today().isoweekday()}"
+    )
+    n = int(input('Введите количество дней: '))
+    today = dt.today()
+    result = today + td(days = n)
+    print(
+        f"Через {n} дней будет {result.date()}. "
+        f"День недели - {result.isoweekday()}"
+    )
+
+if __name__ == '__main__':
+    main()
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/9.png)
 
@@ -188,12 +239,30 @@ else:
 Напишите программу с использованием глобальных переменных, которая будет считать площадь треугольника или прямоугольника в зависимости от того, что выберет пользователь. Получение всей необходимой информации реализовать через input(), а подсчет площадей выполнить при помощи функций. Результатом программы будет число, равное площади, необходимой фигуры.
 ### Ответ:
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+global result
+
+def rectangle():
+    a = float(input("Ширина = "))
+    b = float(input("Высота = "))
+    global result
+    result = a*b
+
+def triangle():
+    a = float(input("Основание = "))
+    h = float(input("Высота = "))
+    global result
+    result = 0.5*a*h
+
+figure = input("1-й прямоугольник, 2-й треугольник: ")
+
+if __name__ == '__main__':
+    if figure == '1':
+        rectangle()
+    elif figure == '2':
+        triangle()
+
+print(f"Площадь: {result}")
+)
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/10.1.png)
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/10.2.png)
