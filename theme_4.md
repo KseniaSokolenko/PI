@@ -34,7 +34,7 @@ if one >= two:
 else:
     print('Не выполняется')
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
 
 ### Вывод: 
 
@@ -49,11 +49,11 @@ if one >= two:
 else:
     print('Не выполняется')
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/2.1.png))
 
 Ниже представлена точно такая же программа, как и выше, только написана более развернуто. В это программе стоит заметить что результат работы функции main() мы помещаем в переменную “answer”, в дальнейшем можно как-то работать с ним, не вызывая функцию повторно, что хорошо сказывается, например, на скорости работы программы.
 
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/2.2.png)
 
 ### Вывод: 
 
@@ -70,11 +70,11 @@ if one >= two:
 else:
     print('Не выполняется')
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/3.1.png)
 
 Ниже представлена точно такая же программа, как и выше, только аргументы передаются в вызове функции, а не как отдельные переменные.
 
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/3.2.png)
 
 ### Вывод: 
 
@@ -92,7 +92,7 @@ if one >= two:
 else:
     print('Не выполняется')
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/4.png)
 
 ### Вывод: 
 
@@ -107,7 +107,8 @@ if one >= two:
 else:
     print('Не выполняется')
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/5.1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/5.2.png)
 
 ### Вывод: 
 
@@ -122,7 +123,7 @@ if one >= two:
 else:
     print('Не выполняется')
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/6.png)
 
 ### Вывод: 
 
@@ -137,7 +138,8 @@ if one >= two:
 else:
     print('Не выполняется')
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/7.1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/7.2.png)
 
 ### Вывод: 
 
@@ -152,16 +154,16 @@ if one >= two:
 else:
     print('Не выполняется')
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/8.1.png)
 
 На первом скриншоте мы просто импортировали модуль таш целиком и вызвали его длинным способом через math.название_фунции. Также импорт стандартного модуля в python возможно осуществить и другими способами, которые будут выполнять ту же самую функцию, но синтаксис будет немного отличатся.
 На втором скриншоте из модуля math мы загрузили в программу только 3 необходимые функции и обращались к ним так, будто они находятся у нас в файле просто через их название. Также замечу что мы импортировали три функции в одну строку. что очень удобно.
 
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/8.2.png)
 
 На третьем скриншоте мы импортировали модуль math и при помощи оператора * загрузили все его функции. По большому счету мы сделали то же самое что и на первом скриншоте, но у нас только поменялся синтаксис вызова этих функций, он стал похож на вызов со второго скриншота.
 
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/8.3.png)
 
 ### Вывод: 
 
@@ -176,7 +178,7 @@ if one >= two:
 else:
     print('Не выполняется')
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/9.png)
 
 В результате день недели указан в виде цифры, где 1 = понедельник, 2 = вторник, 3 = среда и так далее.
 
@@ -193,7 +195,8 @@ if one >= two:
 else:
     print('Не выполняется')
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/10.1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/10.2.png)
 
 ### Вывод: 
 
