@@ -327,8 +327,8 @@ if __name__ == '__main__': # Запускаем программу только 
     time_costs = datetime.now() - start_time  # Время выполнения программы
     print(f"Время выполнения программы - {time_costs}") # Печатаем время выполнения программы
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s1.1.png)
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s1.2.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s1.1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s1.2.png)
 
 ### Вывод: 
 
@@ -343,7 +343,7 @@ if one >= two:
 else:
     print('Не выполняется')
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s2.png)
 
 ### Вывод: 
 
@@ -365,7 +365,7 @@ def main():
 if __name__ == '__main__':
     main()
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s3.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s3.png)
 
 ### Вывод: 
 
@@ -382,7 +382,7 @@ if __name__ == '__main__':
     average = calculate_average(args)
     print(f'Среднее арифметическое: {average}')
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s4.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s4.png)
 
 ### Вывод: 
 
@@ -397,7 +397,7 @@ def heron(a, b, c):
     area = math.sqrt(s * (s - a) * (s - b) * (s - c))
     return area
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s5.2.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s5.2.png)
 
 ```python
 from s5_TRIANGLE import heron
@@ -410,7 +410,7 @@ area = heron(a, b, c)
 if __name__ == '__main__':
     print(f"Площадь треугольника равна {area}")
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s5.1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s5.1.png)
 
 ### Вывод: 
 
