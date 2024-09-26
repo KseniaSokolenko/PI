@@ -300,14 +300,35 @@ print(f"Время выполнения программы - {time_costs}")
 
 ### Ответ:
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+from datetime import datetime # Импортируем модуль для работы с датами и временем
+from math import sqrt # Импортируем модуль для вычисления квадратного корня
+
+def main(**kwargs):
+    """ Определяем функцию main, принимающую параметры через словарь kwargs
+    """
+    for key in kwargs.items(): # Перебираем все ключи и значения в словаре kwargs
+        # Задаем точки x1,x2 и y1,y2
+        x1 = key[1][0]
+        y1 = key[1][1]
+        x2 = x1
+        y2 = y1
+        distance = sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2) # Вычисляем расстояние между двумя точками
+        print(distance) # Печатаем расстояние
+
+if __name__ == '__main__': # Запускаем программу только если она используется как основной скрипт
+    start_time = datetime.now() # Начальное время выполнения программы
+    main( # Вызываем функцию main с конкретными параметрами
+        one=[10, 3],
+        two=[5, 4],
+        three=[15, 13],
+        four=[93, 53],
+        five=[133, 15]
+    )
+    time_costs = datetime.now() - start_time  # Время выполнения программы
+    print(f"Время выполнения программы - {time_costs}") # Печатаем время выполнения программы
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s1.1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s1.2.png)
 
 ### Вывод: 
 
@@ -330,44 +351,66 @@ else:
 Напишите программу, которая будет выводить текущее время, с точностью до секунд на протяжении 5 секунд. Программу нужно написать с использованием цикла. Подсказка: необходимо использовать модуль datetime и date, а также вам необходимо как-то “усыплять” программу на 1 секунду.
 ### Ответ:
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+def main():
+    import datetime
+    from time import sleep
+
+    current_time = datetime.datetime.now().strftime("%H:%M:%S")
+
+    for _ in range(5):
+        print(current_time)
+        sleep(1)
+        current_time = datetime.datetime.now().strftime("%H:%M:%S")
+
+if __name__ == '__main__':
+    main()
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s3.png)
 
 ### Вывод: 
 
 ### №4. 
-Напишите программу, которая считает среднее арифметическое от аргументов вызываемое функции, с условием того, что изначальное количество этих аргументов неизвестно. Программу необходимо реализовать используя одну функцию и “точку входа”.
+Напишите программу, которая считает среднее арифметическое от аргументов вызываемой функции, с условием того, что изначальное количество этих аргументов неизвестно. Программу необходимо реализовать используя одну функцию и “точку входа”.
 ### Ответ:
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+def calculate_average(args):
+    total = sum(args)
+    return total / len(args)
+
+if __name__ == '__main__':
+    args = list(map(float, input('Введите значения: ').split()))
+    average = calculate_average(args)
+    print(f'Среднее арифметическое: {average}')
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s4.png)
 
 ### Вывод: 
 
-### №4. 
+### №5. 
 Создайте два Python файла, в одном будет выполняться вычисление площади треугольника при помощи формулы Герона (необходимо реализовать через функцию), а во втором будет происходить взаимодействие с пользователем (получение всей необходимой информации и вывод результатов). Напишите эту программу и выведите в консоль полученную площадь.
 ### Ответ:
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+import math
+
+def heron(a, b, c):
+    s = (a + b + c) / 2
+    area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+    return area
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s5.2.png)
+
+```python
+from s5_TRIANGLE import heron
+
+a = float(input("Введите первую сторону треугольника: "))
+b = float(input("Введите вторую сторону треугольника: "))
+c = float(input("Введите третью сторону треугольника: "))
+
+area = heron(a, b, c)
+if __name__ == '__main__':
+    print(f"Площадь треугольника равна {area}")
+```
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_3/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s5.1.png)
 
 ### Вывод: 
 
