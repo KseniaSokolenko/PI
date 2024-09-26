@@ -41,7 +41,11 @@ if __name__ == '__main__':
 Напишите функцию, которая выполняет любые арифметические действия, возвращает при помощи return значение в место, откуда вызывали функцию. Выведите результат в консоль. Вызовите функцию используя “точку входа”.
 ### Ответ:
 ```python
-исправить
+def main():
+    return 2+2
+
+if __name__ == '__main__':
+    print(main())
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/2.1.png))
 
@@ -67,7 +71,16 @@ if __name__ == '__main__':
 На скриншоте ниже приведен пример программы, в которой аргумент функции "x" превращается в параметр “one”, то же самое происходит "y" и “two”
 ### Ответ:
 ```python
-исправить
+def main(one, two):
+     result = one + two
+     return result
+
+if __name__ == '__main__':
+    for i in range(5):
+        x =1
+        y =10
+        answer = main(x, y)
+        print(answer)
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/3.1.png)
 
@@ -174,7 +187,16 @@ if __name__ == '__main__':
 Напишите программу, которая будет выводить корень, синус, косинус полученного от пользователя числа.
 ### Ответ:
 ```python
-исправить
+import math
+
+def main():
+    value = int(input('Введите значение: '))
+    print(math.sqrt(value))
+    print(math.sin(value))
+    print(math.cos(value))
+
+if __name__ == '__main__':
+    main()
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/8.1.png)
 
@@ -182,7 +204,16 @@ if __name__ == '__main__':
 На втором скриншоте из модуля math мы загрузили в программу только 3 необходимые функции и обращались к ним так, будто они находятся у нас в файле просто через их название. Также замечу что мы импортировали три функции в одну строку. что очень удобно.
 
 ```python
-исправить
+from math import sqrt, sin, cos
+
+def main():
+    value = int(input('Введите значение: '))
+    print(sqrt(value))
+    print(sin(value))
+    print(cos(value))
+
+if __name__ == '__main__':
+    main()
 ```
 
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_4/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/8.2.png)
