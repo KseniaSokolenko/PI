@@ -50,7 +50,7 @@ print(a)
 Вариант с set():
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_5/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/2.1.png)
 Что происходит с frozenset():
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_5/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/2.1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_5/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/2.2.png)
 
 ### Вывод: 
 
