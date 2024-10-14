@@ -28,12 +28,23 @@
 По большому счету написали данную программу мы с вами научились заменять иногда громоздкую конструкцию if/elif/else. Поскольку здесь функция словар полностью повторяет функциональность условия, но при этом использовании словарей в более сложных программах есть намного больше возможностей реализации.
 ### Ответ:
 ```python
-set_1 = {'White', 'Red', 'Black', 'Pink'}
-set_2 = {'Red', 'Green', 'Blue', 'Red'}
-
-print(set_1 - set_2)
+request = int(input('Введите номер кабинета: '))
+dictionary = {
+    101: {'key': 1234, 'access': True},
+    102: {'key': 1337, 'access': True},
+    103: {'key': 8943, 'access': True},
+    104: {'key': 5555, 'access': False},
+    None: {'key': None, 'access': False}
+}
+response = dictionary.get(request)
+if not response:
+    response = dictionary[None]
+key = response.get('key')
+access = response.get('access')
+print(key, access)
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/1.2.png)
 
 ### Вывод: 
 В данном фрагменте кода используются множества set_1 и set_2. Множество set_1 содержит элементы 'White', 'Red', 'Black' и 'Pink'. Множество set_2 содержит элементы 'Red', 'Green', 'Blue' и 'Red'. Выполняется операция вычитания множеств set_1 - set_2, которая удаляет все общие элементы между множествами, оставляя только уникальные для set_1. 
@@ -43,10 +54,16 @@ print(set_1 - set_2)
 Ниже на скриншоте мы использовали встроенный модуль print, который выводит большие объемы информации более понятно для восприятия человеческим глазом. Иногда очень удобно использовать данную возможность Python.
 ### Ответ:
 ```python
-set_1 = {'White', 'Red', 'Black', 'Pink'}
-set_2 = {'Red', 'Green', 'Blue', 'Red'}
+from pprint import pprint
 
-print(set_1 - set_2)
+my_dict = {'first': 'so easy'}
+
+def dict_maker (**kwargs):
+    my_dict.update(**kwargs)
+
+dict_maker(a1 = 1, a2 = 20, a3 = 54, a4 = 13)
+dict_maker(name = 'Ксения', age = 20, weight = 60, eyes_color = 'green')
+pprint(my_dict)
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/2.png)
 
@@ -57,10 +74,10 @@ print(set_1 - set_2)
 Для решения некоторых задач бывает необходимо разложить строку на отдельные символы. Мы знаем, что это можно сделать при помощи split(), у которого более гибкая настройка для разделения для этого, но нам нужно посильно разделить строку без всяких условий, то для этого мы можем использовать конструкции (tuple). Для этого нам нужно иметь нужную строку, которую будем делить и "обвернем" ее в tuple и дальше мы можем как нам угодно с ней работать, например, сделать ее списком (тогда получится полный аналог split()) или же работать с ним дальше, как с кортежем.
 ### Ответ:
 ```python
-set_1 = {'White', 'Red', 'Black', 'Pink'}
-set_2 = {'Red', 'Green', 'Blue', 'Red'}
-
-print(set_1 - set_2)
+input_string = 'HelloWorld'
+result = tuple(input_string)
+print(result)
+print(list(result))
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/3.png)
 
@@ -71,10 +88,14 @@ print(set_1 - set_2)
 Вовочка решил написать крутую функцию, которая будет писать имя, возраст и место работы, но при этом на вход этой функции будет поступать кортеж. Помогите Воочке написать эту программу.
 ### Ответ:
 ```python
-set_1 = {'White', 'Red', 'Black', 'Pink'}
-set_2 = {'Red', 'Green', 'Blue', 'Red'}
+def personal_info(name, age, company = 'unnamed'):
+    print(f"Имя: {name} Возраст: {age} Компания: {company}")
 
-print(set_1 - set_2)
+tom = ("Ксения", 20)
+personal_info(*tom)
+
+bob = ("Саша", 20, "Yandex")
+personal_info(*bob)
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/4.png)
 
@@ -85,10 +106,15 @@ print(set_1 - set_2)
 Для сопровождения первых лиц государства X нужен кортеж, но никто не может определиться с порядком машин, поэтому вам нужно написать функцию, которая будет сортировать кортеж, состоящий из целых чисел по возрастанию, и возвращает его. Если хотя бы один элемент не является целым числом, то функция возвращает исходный кортеж.
 ### Ответ:
 ```python
-set_1 = {'White', 'Red', 'Black', 'Pink'}
-set_2 = {'Red', 'Green', 'Blue', 'Red'}
+def tuple_sort(tpl):
+    for elm in tpl:
+        if not isinstance(elm, int):
+            return tpl
+    return tuple(sorted(tpl))
 
-print(set_1 - set_2)
+if __name__ == '__main__':
+    print(tuple_sort((5, 5, 3, 1, 9)))
+    print(tuple_sort((5, 5, 2.1, '1', 9)))
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/5.png)
 
