@@ -228,14 +228,34 @@ print(cortesh((1, 2, 8, 5, 1, 2, 9), 8))
 Самостоятельно придумайте и решите задачу, в которой будут обязательно использоваться кортеж или список. Проверьте минимум три теста для проверки работоспособности вашей задачи.
 
 #### Задача: 
-Переставить элементы списка так, чтобы сначала шли положительные, потом отрицательные, а затем нули.
+Переставить числа заданного списка так, чтобы сначала шли отрицательные, потом нули, а затем положительные. Затем сделать данный список кортежем и вывести.
 
 ### Ответ:
 ```python
-set_1 = {'White', 'Red', 'Black', 'Pink'}
-set_2 = {'Red', 'Green', 'Blue', 'Red'}
+def list(lst):
+    negative, zero, positive = [], [], []
+    for x in lst:
+        if x > 0:
+            positive.append(x)
+        elif x < 0:
+            negative.append(x)
+        else:
+            zero.append(x)
+    return negative + zero + positive
 
-print(set_1 - set_2)
+
+def main():
+
+    lst = list(map(int, input("Введите список чисел через пробел: ").split()))
+
+    result = list(lst)
+
+    cortesh = tuple(result)
+    print(cortesh)
+
+
+if __name__ == "__main__":
+    main()
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s5.png)
 
