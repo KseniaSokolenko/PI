@@ -257,7 +257,14 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+Тест 1:
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s5.png)
+
+Тест 2:
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s5.1.png)
+
+Тест 3:
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s5.2.png)
 
 ### Вывод: 
 В данном фрагменте кода используются множества set_1 и set_2. Множество set_1 содержит элементы 'White', 'Red', 'Black' и 'Pink'. Множество set_2 содержит элементы 'Red', 'Green', 'Blue' и 'Red'. Выполняется операция вычитания множеств set_1 - set_2, которая удаляет все общие элементы между множествами, оставляя только уникальные для set_1. 
