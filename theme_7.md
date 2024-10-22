@@ -201,7 +201,7 @@ with open('rows_300.csv', 'w', encoding='utf-8', newline='') as f:
 time.sleep(0.01)
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/10.1.png)
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/10.2.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/коды/rows_300.csv)
 
 ### Вывод: 
 Этот код принимает номер кабинета от пользователя и проверяет его наличие в словаре dictionary. Если ключ существует и у него есть значение 'access': True, то программа выводит соответствующий ключ и доступ. В противном случае, она использует значение по ключу 'None' и выводит его.
