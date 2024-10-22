@@ -68,9 +68,8 @@ f.close()
 Напишите программу, которая выведет все строки из вашего файла в массиве, при этом используйте конструкцию with open().
 ### Ответ: 
 ```python
-f = open('input.txt', 'r')
-print(f.readlines())
-f.close()
+with open ('input.txt') as f:
+    print(f.readlines())
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/4.png)
 
@@ -81,9 +80,9 @@ f.close()
 Напишите программу, которая выведет каждую строку из вашего файла отдельно, при этом используйте конструкцию with open().
 ### Ответ: 
 ```python
-f = open('input.txt', 'r')
-print(f.readlines())
-f.close()
+with open ('input.txt') as f:
+    for line in f:
+        print(line)
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/5.png)
 
@@ -94,11 +93,15 @@ f.close()
 Напишите программу, которая будет добавлять новую строку в ваш файл, а потом выведет полученный файл в консоль. Вывод можно осуществлять любым способом. Обязательно проверьте сам файл, чтобы изменения в нем тоже отображались.
 ### Ответ: 
 ```python
-f = open('input.txt', 'r')
-print(f.readlines())
-f.close()
+with open('input.txt', 'a+') as f:
+    f.write('\nA quote from a book')
+
+with open('input.txt', 'r') as f:
+    result = f.readlines()
+    print(result)
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/6.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/6.1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/6.2.png)
 
 ### Вывод: 
 Этот код принимает номер кабинета от пользователя и проверяет его наличие в словаре dictionary. Если ключ существует и у него есть значение 'access': True, то программа выводит соответствующий ключ и доступ. В противном случае, она использует значение по ключу 'None' и выводит его.
@@ -107,11 +110,14 @@ f.close()
 Напишите программу, которая перепишет всю информацию, которая была у вас в файле до этого, например, направит любые данные из произвольно вами составленного списка. Также не забудьте проверить что измененная вами информация сохранилась в файле.
 ### Ответ: 
 ```python
-f = open('input.txt', 'r')
-print(f.readlines())
-f.close()
+lines = ['one', 'two', 'three']
+with open('input.txt', 'w') as f:
+    for line in lines:
+        f.write('\nCycle run ' + line)
+    print('Done!')
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/7.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/7.1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/7.2.png)
 
 ### Вывод: 
 Этот код принимает номер кабинета от пользователя и проверяет его наличие в словаре dictionary. Если ключ существует и у него есть значение 'access': True, то программа выводит соответствующий ключ и доступ. В противном случае, она использует значение по ключу 'None' и выводит его.
@@ -120,9 +126,17 @@ f.close()
 Выберите любую папку на своем компьютере, имеющую вложенные директории. Выведите на печать в терминал ее содержимое, как и всех подкаталогов при помощи функции print_docs(directory).
 ### Ответ: 
 ```python
-f = open('input.txt', 'r')
-print(f.readlines())
-f.close()
+import os
+
+def print_docs(directory):
+    all_files = os.walk(directory)
+    for catalog in all_files:
+        print(f'Папка {catalog[0]} содержит:')
+    print(f'Директории: {", ".join([folder for folder in catalog[1]])}')
+    print(f'Файлы: {", ".join([file for file in catalog[2]])}')
+    print('-' * 40)
+
+print_docs('C:/Users/sokol/Pictures/Животные')
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/8.png)
 
@@ -142,12 +156,23 @@ f.close()
 Удача!
 Я тебя люблю.
 
-Требуется реализовать функцию, которая выводит слово, имеющее максимальную длину (или список слов, если таковых несколько). Проверьте работоспособность программы на своем наборе данных.
+Требуется реализовать функцию, которая выводит слово, имеющее максимальную длину (или список слов, если таковых несколько). 
 ### Ответ: 
 ```python
-f = open('input.txt', 'r')
-print(f.readlines())
-f.close()
+def longestwords(file):
+    with open(file, encoding='utf-8') as f:
+        words = f.read().split()
+        max_length = len(max(words, key=len))
+        for word in words:
+            if len(word) == max_length:
+                sought_words = word
+
+            if len(sought_words) == 1:
+                return ' '.join([sought_words])
+            return sought_words
+
+
+print(longestwords('input.txt'))
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/9.png)
 
@@ -162,11 +187,21 @@ f.close()
 Для наглядности на каждой интерации цикла искусственно приостанавливайте скрипт на 0,01 секунды.
 ### Ответ: 
 ```python
-f = open('input.txt', 'r')
-print(f.readlines())
-f.close()
+import csv
+import datetime
+import time
+
+with open('rows_300.csv', 'w', encoding='utf-8', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(['№', 'Секунда', 'Микросекунда'])
+    for line in range(1, 301):
+        dt = datetime.datetime.now()
+        writer.writerow([line, dt.second, dt.microsecond])
+
+time.sleep(0.01)
 ```
-![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/10.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/10.1.png)
+![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_6/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/10.2.png)
 
 ### Вывод: 
 Этот код принимает номер кабинета от пользователя и проверяет его наличие в словаре dictionary. Если ключ существует и у него есть значение 'access': True, то программа выводит соответствующий ключ и доступ. В противном случае, она использует значение по ключу 'None' и выводит его.
