@@ -186,9 +186,17 @@ for shape in shapes:
 Самостоятельно создайте класс и его объект. Они должны отличаться, от тех, что указаны в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
 ### Ответ: 
 ```python
-f = open('input.txt', 'r')
-print(f.readline())
-f.close()
+class Animal:
+    def __init__(self, name, klass):
+        self.name = name
+        self.klass = klass
+
+    def sound(self):
+        a = input(f'Введите, где обитает {self.name}:')
+        print(f"Верно, {self.name} обитает", a)
+
+an_animal = Animal("лев", "млекопитающие")
+print(f'Данное животное называется {an_animal.name} и пренадлежит к классу {an_animal.klass}')
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_8/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s1.png)
 
@@ -199,9 +207,17 @@ f.close()
 Самостоятельно создайте атрибуты и методы для ранее созданного класса. Они должны отличаться, от тех, что указаны в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
 ### Ответ: 
 ```python
-f = open('input.txt', 'r')
-print(f.readline())
-f.close()
+class Animal:
+    def __init__(self, name, klass):
+        self.name = name
+        self.klass = klass
+
+    def place(self):
+        a = input(f'Введите, где обитает {self.name}:')
+        print(f"Верно, {self.name} обитает", a)
+
+an_animal = Animal("лев", "млекопитающие")
+an_animal.sound()
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_8/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s2.png)
 
@@ -212,9 +228,30 @@ f.close()
 Самостоятельно реализуйте наследование, продолжая работать с ранее созданным классом. Оно должно отличаться, от того, что указано в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
 ### Ответ: 
 ```python
-f = open('input.txt', 'r')
-print(f.readline())
-f.close()
+class Animal:
+    def __init__(self, name, klass):
+        self.name = name
+        self.klass = klass
+
+    def place(self):
+        a = input(f'Введите, где обитает {self.name}:')
+        print(f"Верно, {self.name} обитает", a)
+
+class Pet(Animal):
+    def __init__(self, name, name2):
+        self.name2 = name2
+        self.name = name
+
+    def home(self):
+        b = input('У вас есть домашний питомец?')
+        if b == 'да':
+            print(f'Ваше животное зовут {self.name2} и это {self.name}')
+        else:
+            print(f'К сожалению, {self.name} {self.name2} не ваш питомец')
+
+my_pet = Pet('попугай', 'Кеша')
+my_pet.place()
+my_pet.home()
 ```
 ![Меню](https://github.com/KseniaSokolenko/PI/blob/theme_8/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8/s3.png)
 
